@@ -1,10 +1,127 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page Title</title>
+    <title>Cuestionario</title>
+    <style>
+        table {width:70%}
+        th, td {
+          border-style:solid;
+          border-color: #96D4D4;
+          text-align: justify;
+          font-family: 'Courier New', Courier, monospace;
+        }
+        .footer {
+            position: static;
+            left: 0;
+             bottom: 0;
+            width: 100%;
+         background-color: red;
+            color: white;
+        text-align: center;
+            }
+        </style>
 </head>
 <body>
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
+    <h1>Cuestionario</h1>
+    <table>
+        <tr>
+          <th> Breve descripci&oacuten de c&oacutemo instal&oacute el servidor Web, ¿qu&eacute herramientas o comandos us&oacute?, ¿qu&eacute
+            inconvenientes encontr&oacute?</th>
+        </tr>
+        <tr>
+            <th>Para instalarlo</th>
+            <td>sudo dnf install nginx</td> 
+        </tr>
+        <tr>
+            <th>Para iniciar el servicio nginx</th>
+            <td>sudo systemctl start nginx</td> 
+        </tr>
+        <tr>
+            <th>Para iniciar autom&aacuteticamente el servicio nginx con el sistema operativo</th>
+            <td>sudo systemctl enable nginx</td> 
+        </tr>
+        <tr>
+            <th>Para cambiar la configuraci&oacuten de puerto y de ruta de proyectos con el editor nano</th>
+            <td>sudo nano /etc/nginx/nginx.conf</td> 
+        </tr>
+        <tr>
+            <th>Para reiniciar el servicio nginx</th>
+            <td>sudo systemctl restart nginx</td> 
+        </tr>
+        <tr>
+            <th>Para recargar el servicio nginx</th>
+            <td>sudo systemctl reload nginx</td> 
+        </tr>
+        <tr>
+            <th>Para crear la carpeta nueva de proyecto</th>
+            <td>sudo mkdir -p /home/ninja/projects/nginx</td> 
+        </tr>
+        <tr>
+            <th>Clonar contenido de la carpeta por defecto de ngnix por la nueva carpeta de proyecto</th>
+            <td>sudo rsync -av /usr/share/nginx/html "/home/ninja/projects/nginx"</td> 
+        </tr>
+        <tr>
+            <th>Inconvenientes 1</th>
+            <td>Al momento de probar la ruta nueva de proyecto, me daba error 403 que dec&iacutea que el archivo o la carpeta estaba perdida. Por eso se investig&oacute y se hizo los cambios de permisos</td> 
+        </tr>
+        <tr>
+            <th>Para cambiar los permisos de la carpeta de uusario ninja</th>
+            <td>sudo chmod 711 /home/ninja</td> 
+        </tr>
+        <tr>
+            <th>Para cambiar los permisos de la carpeta nueva de proyecto</th>
+            <td>sudo chmod 755 /home/ninja/projects/nginx</td> 
+        </tr>
+        <tr>
+            <th>Para cambiar los permisos de los archivos dentro de la carpeta nueva de proyecto</th>
+            <td>sudo chmod 644 /home/ninja/projects/nginx/*</td> 
+        </tr>
+        <tr>
+            <th>Inconvenientes 2</th>
+            <td>Al momento de probar el index.html que ven&iacutea en la carpeta por defecto, estaba con link s&iacutembolico, por lo tanto se deb&iacutea hacer el enlace al reci&eacuten copiado index.html</td> 
+        </tr>
+        <tr>
+            <th>Para dar enlace s&iacutembolico al archivo index.html al que viene por defecto</th>
+            <td>ln -sfn /usr/share/testpage/index.html /home/ninja/projects/nginx/index.html</td> 
+        </tr>
+        <tr>
+          <th>Los siguientes datos de la m&aacutequina en la que est&aacute instalado el servidor web y que comandos de Linux us&oacute 
+            para averiguarlos:</th>
+        </tr>
+        <tr>
+          <th>¿Qu&eacute Sistema Operativo tiene la m&aacutequina?</th>
+          <td>sudo cat /etc/os-release</td>
+          <td>Fedora Linux 39 (Server Edition)</td>
+        </tr>
+        <tr>
+          <th>Espacio en Disco</th>
+          <td>sudo parted -l</td>
+          <td>/dev/sda 42.9 GB - /dev/zram0 3.045 GB</td>
+        </tr>
+        <tr>
+            <th>Cantidad de memoria RAM</th>
+            <td>free -m</td>
+            <td>RAM 2904 MB - SWAP 6999 MB</td>
+        </tr>
+        <tr>
+            <th>Versi&oacuten del kernel de Linux</th>
+            <td>uname -a </td>
+            <td>Linux fedocker 6.8.9-200.fc39.x86_64</td>
+        </tr>
+        <tr>
+            <th>Caracter&iacutesticas de CPU</th>
+            <td>sudo cat /proc/cpuinfo/</td>
+            <td>Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz</td>
+        </tr>
+        <tr>
+            <th>IP privada</th>
+            <td>ifconfig</td>
+            <td>192.168.0.10</td>
+        </tr>
+      </table>
+
+      <div class="footer">
+        <p>Allan Jim&eacutenez Vergara - 2024 (c)</p>
+      </div> 
 </body>
 </html>
