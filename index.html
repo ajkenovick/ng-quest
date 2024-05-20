@@ -25,8 +25,8 @@
     <h1>Cuestionario</h1>
     <table>
         <tr>
-          <th> Breve descripci&oacuten de c&oacutemo instal&oacute el servidor Web, ¿qu&eacute herramientas o comandos us&oacute?, ¿qu&eacute
-            inconvenientes encontr&oacute?</th>
+          <th> Breve descripci&oacuten de c&oacutemo instal&oacute el servidor Web, &#191;qu&eacute herramientas o comandos us&oacute&#63;, &#191;qu&eacute
+            inconvenientes encontr&oacute&#63;</th>
         </tr>
         <tr>
             <th>Para instalarlo</th>
@@ -55,6 +55,14 @@
         <tr>
             <th>Para crear la carpeta nueva de proyecto</th>
             <td>sudo mkdir -p /home/ninja/projects/nginx</td> 
+        </tr>
+        <tr>
+            <th>Para el permiso de cortafuegos para el puerto cambiado</th>
+            <td> sudo firewall-cmd --add-port=8088/tcp --permanent</td> 
+        </tr>
+        <tr>
+            <th>Para guardar los cambios de permisos de cortafuegos para el puerto cambiado</th>
+            <td> sudo firewall-cmd --reload</td> 
         </tr>
         <tr>
             <th>Clonar contenido de la carpeta por defecto de ngnix por la nueva carpeta de proyecto</th>
@@ -89,7 +97,7 @@
             para averiguarlos:</th>
         </tr>
         <tr>
-          <th>¿Qu&eacute Sistema Operativo tiene la m&aacutequina?</th>
+          <th>&#191;Qu&eacute Sistema Operativo tiene la m&aacutequina&#63;</th>
           <td>sudo cat /etc/os-release</td>
           <td>Fedora Linux 39 (Server Edition)</td>
         </tr>
@@ -121,7 +129,7 @@
       </table>
 
       <div class="footer">
-        <p>Allan Jim&eacutenez Vergara - 2024 (c)</p>
+        <p>Allan Jim&eacutenez Vergara - 2024 &#169;</p>
       </div> 
 </body>
 </html>
